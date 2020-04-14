@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -19,7 +21,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -48,12 +49,137 @@ table {
 	border-spacing: 0;
 }
 
+h1, h2, h3, h4, h5, h6{
+	font-size: 30px;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	font-family: 'Lato', sans-serif;
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	max-width: 1440px;
+	margin-left: 13rem;
+	margin-right: 10rem;
+	font-family: 'Roboto', sans-serif;
 }
 
+/* My HTML */
+
+@main-color: grey;
+@selfinfo-color: lightgrey;
+
+/*Header Section*/
+header nav a{
+  	border: 0;
+  	padding: 1rem;
+	color: black;
+}
+
+.headerNav{
+	display: flex;
+	justify-content: flex-end;
+	padding: 1rem;
+	background: white;
+}
+
+/*Self-Info Block*/
+body div img{
+	width: 500px;
+	height: 500px;
+	padding: 2rem;
+	background: @selfinfo-color;
+}
+
+.selfInfoBlock{
+	background: @selfinfo-color;
+	padding-bottom: 5rem;
+}
+
+h1, h4{
+	padding: 1rem;
+}
+
+.selfInfoBlock p{
+	padding: 1rem;
+	border-top: 1px solid @main-color;
+	
+}
+
+.selfInfoBlock a{
+	display: inline-block;
+	align-items: baseline;
+	margin: 0 1rem;
+	border: 1px solid @main-color;
+	border-radius: 10px;
+	background-color: @main-color;
+	color: white;
+	padding: 20px;
+}
+
+
+/*Listen Up... Section*/
+.ListenUpSection {
+	display: flex;
+	flex-direction: row;
+}
+
+.ListenUpText{
+	width: 500%;
+}
+
+/*Stuff I'm Good At Section*/
+.GoodStuffSection{
+	width: 400%;
+}
+
+.BoxOfGoodStuff li{
+	border: 1px outset @main-color;
+	line-height: 200%;
+}
+
+/*Work History Section*/
+.WorkHistoryList{
+	display: flex;;
+	justify-content: space-evenly;
+	padding: 1rem;
+}
+
+.Years li{
+	line-height: 200%;
+	font-weight: bold;
+}
+
+.Company li{
+	line-height: 200%;
+}
+
+.WorkTitle li{
+	line-height: 200%;
+}
+
+.TechUsed li{
+	line-height: 200%;
+}
+
+/*Footer Section*/
+footer p{
+	display: flex;
+	justify-content: center;
+	color: white;
+	background: @main-color;
+	padding: 2rem;
+}
+
+/*Tablet*/
+@media(max-width: 500px){
+
+	* {
+		background-color: red;
+	}
+}
